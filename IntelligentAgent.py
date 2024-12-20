@@ -1,5 +1,5 @@
-# Duncan Greene uni: dcg2163
-# Coding Assignment 3
+# Duncan Greene - Columbia University
+
 from BaseAI import BaseAI
 import time
 
