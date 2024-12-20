@@ -10,7 +10,9 @@ class IntelligentAgent(BaseAI):
         depth = 1
         startTime = time.process_time()
         #itertive deepening search with timeConstraint taken into effect and max_depth limit of 3 for quicker runtime
-        while time.process_time() - startTime < 0.195 and depth <= 3:
+        ## Replace the while loop with the following line for quicker runtime (adds a max depth limit):
+        #while time.process_time() - startTime < 0.195 and depth <= 3:
+        while time.process_time() - startTime < 0.195
             move = self.minimax(grid, depth, float('-inf'), float('inf'), startTime)
             if move is not None:
                 bestMove = move
