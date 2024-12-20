@@ -45,7 +45,7 @@ class GameManager:
         self.prevTime = time.process_time()
 
     def getNewTileValue(self) -> int:
-        """ Returns 2 with probability 0.95 and 4 with 0.05 """
+        """ Returns 2 with probability 0.90 and 4 with 0.10 """
         return self.possibleNewTiles[random.random() > self.probability]
 
     def insertRandomTiles(self, numTiles:int):
