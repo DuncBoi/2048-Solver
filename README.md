@@ -58,8 +58,7 @@ This is a 2048 Solver implemented in Python for **COMS 4701 - Artificial Intelli
 
 - The value of every tile on the board is multiplied by the number in the corresponing position of the snake matrix.
 - The board is exponentially weighted to promote monotonicity such that the biggest tile is in the bottom left corner, with subsequent tiles decreasing in a snake-like pattern.
-- Also, the number of empty tiles on a given board is factored in to promote open space during early stages of the game and break ties between boards with equal snake heuristic values.
-- So: $$Heuristic = 0.9 \cdot snakeVal + 0.1 \cdot emptyTiles$$. (The snake heuristic is scaled down by a factor of 100)
+- The number of empty tiles is added to the snake value (scaled down by a factor of 100) to promote open space during early stages of the game and break ties between boards with equal snake values.
 - To account for the randomness of incoming tile placement, the algorithm at min nodes will return the weighted average of the heuristic through all possible new board configurations.
 ## Usage
 1. `python3 GameManager.py`
